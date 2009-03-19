@@ -1,5 +1,5 @@
-ssh_options[:keys] ||= {:keys => [File.expand_path("~/.ssh/id_dsa"),File.expand_path("~/.ssh/id_rsa") ]}
-ssh_options[:port] ||= {:port => 22 }
+ssh_options[:keys] ||= [File.expand_path("~/.ssh/id_dsa"),File.expand_path("~/.ssh/id_rsa") ]
+ssh_options[:port] ||= 22
 
 namespace :ssh do
   desc <<-DESC
