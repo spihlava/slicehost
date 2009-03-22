@@ -9,7 +9,7 @@ set :ruby_enterprise_version do
 end
 
 set :passenger_version do
-  `gem list passenger$ -r`.gsub(/[\n|\s|passenger|(|)]/,"")
+  capture("gem list passenger$ -r").gsub(/[\n|\s|passenger|(|)]/,"")
 end
 
 namespace :ruby do
